@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Komodo Project File - DO NOT EDIT -->
+<project id="49d9586e-acfd-4186-ad60-e9bfc3e4de00" kpf_version="5" name="MyProject.komodoproject">
+<preference-set idref="49d9586e-acfd-4186-ad60-e9bfc3e4de00">
+  <string id="lastTestPlanName_pref">New test plan #1</string>
+  <string id="pythonDefaultInterpreter">D:\Python27\python.exe</string>
+  <string id="pythonExtraPaths"></string>
+  <string id="python_debuggerLogLevel">WARN</string>
+  <string id="python_debuggerLogPath"></string>
+<preference-set id="testPlans">
+<preference-set id="New test plan #1">
+  <string id="command_line"></string>
+  <string id="directory">file:///D:/workspaseKomodo/</string>
+  <string id="language">Perl - TAP (*.t)</string>
+</preference-set>
+</preference-set>
+</preference-set>
+</project>
