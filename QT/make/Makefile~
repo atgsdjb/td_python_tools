@@ -1,0 +1,32 @@
+#
+#
+include Name.mk
+##VPATH := obj
+V1 :=$(V2)
+V2 =-v2-
+V3 :=$(shell date)
+V4 =$(shell date)
+SOURCE :=$(wildcard *.c)
+OBJ_PATH = # obj/
+vpath %.c temp
+vpath %.o obj
+OBJECT := root.o #$(subst %.c,%.o,$(SOURCE))
+all := test
+all : $(OBJECT)
+	@echo $(VPATH)
+	gcc -o $(all) $(OBJ_PATH)$(OBJECT)
+%.o : %.c
+	gcc -c $< -o ./obj/$@
+
+#如果root.c文件移动到temp目录下,虽然已经指定了VPATH变量,还是报告语法错误
+#root.o: root.c
+#	-mkdir obj
+#	gcc -c root.c   ./obj/root.o
+#	@echo '---begin-----'
+#	@sleep 5
+#	@echo $(V3)
+#	@echo $(shell date)
+#	@sleep 2
+#	@echo 'sleep 2 sec -----'
+#	@echo $(V3)
+#	@echo $(shell date)
