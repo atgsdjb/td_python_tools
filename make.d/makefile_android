@@ -1,0 +1,86 @@
+
+#############################################################################################################
+# android def
+
+target_path=..
+
+#############################################################################################################
+# compile object
+
+all: xos_common\
+	xos_core\
+	xos_curl\
+	xos_log\
+	xos_xml\
+	xos_udp\
+	xos_test\
+	uusee
+
+xos_common:
+	cd $(target_path)/xos_common/src/;make -f makefile_android || exit 1;cd -;
+
+xos_core:
+	cd $(target_path)/xos_core/xos_core_makefile/;make -f makefile_android || exit 1;cd -;
+
+xos_curl:
+	cd $(target_path)/xos_curl/xos_curl_makefile/;make -f makefile_android || exit 1;cd -;
+
+xos_log:
+	cd $(target_path)/xos_log/xos_log/src/;make -f makefile_android || exit 1;cd -;
+	
+xos_xml:
+	cd $(target_path)/xos_xml/xos_xml_makefile/;make -f makefile_android || exit 1;cd -;
+	
+xos_udp:
+	cd $(target_path)/xos_udp/src/;make -f makefile_android || exit 1;cd -;	
+
+xos_test:
+	cd $(target_path)/xos_test/src/;make -f makefile_android || exit 1;cd -;
+	
+uusee:
+	cd $(target_path)/uusee/uusee_makefile/;make -f makefile_android || exit 1;cd -;
+
+#############################################################################################################
+# clear objects
+
+clean: xos_common_clean\
+	xos_core_clean\
+	xos_curl_clean\
+	xos_log_clean\
+	xos_xml_clean\
+	xos_udp_clean\
+	xos_test_clean\
+	uusee_clean
+	
+xos_common_clean:
+	cd $(target_path)/xos_common/src/;make -f makefile_android clean || exit 1;cd -;
+
+xos_core_clean:
+	cd $(target_path)/xos_core/xos_core_makefile/;make -f makefile_android clean || exit 1;cd -;
+
+xos_curl_clean:
+	cd $(target_path)/xos_curl/xos_curl_makefile/;make -f makefile_android clean || exit 1;cd -;	
+
+xos_log_clean:
+	cd $(target_path)/xos_log/xos_log/src/;make -f makefile_android clean || exit 1;cd -;
+	
+xos_xml_clean:
+	cd $(target_path)/xos_xml/xos_xml_makefile/;make -f makefile_android clean || exit 1;cd -;
+
+xos_server_clean:
+	cd $(target_path)/xos_server/xos_server_makefile/;make -f makefile_android clean || exit 1;cd -;
+	
+xos_udp_clean:
+	cd $(target_path)/xos_udp/src/;make -f makefile_android clean || exit 1;cd -;
+	
+xos_test_clean:
+	cd $(target_path)/xos_test/src/;make -f makefile_android clean || exit 1;cd -;
+
+uusee_clean:
+	cd $(target_path)/uusee/uusee_makefile/;make -f makefile_android clean || exit 1;cd -;
+
+#############################################################################################################
+# commit compile result to svn
+
+commit:
+	cd ../cross_platform_sdk/xos_sdk/android/;chmod 777 update;./update $(M);cd -;
