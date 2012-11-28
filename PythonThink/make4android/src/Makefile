@@ -1,0 +1,28 @@
+#!/usr/bin/make
+#构建当前目录下所有目标文件----version.0.1
+#files :=$(shell ls )
+touch =test.exe
+#toolchains
+CC := gcc
+# PATH
+local_inc := ../include
+##  OPTHION 4 CPP
+local_cppflags := -I$(local_inc)
+
+files :=$(wildcard *.c *.cpp)
+sources_c := $(filter %.c,$(files))
+sources_cpp := $(filter %.cpp,$(files))
+sources :=$(sort $(sources_cpp) $(sources_c))
+objects :=$(subst .c,.o,$(sources_c)) $(subst .cpp,.o,$(sources_cpp))
+depends :=$(subst .o,.d,$(objects))
+%.o : %.c
+	@echo $(local_cppflasg)
+	$(CC) -c $< $(local_cppflags) 
+all : $(objects)
+	@echo $^
+	$(CC) $^ -o $(touch)
+#obj : $(sources)
+#	@echo "call object"
+%.d : %.c
+	$(CC) -M $< > $@
+

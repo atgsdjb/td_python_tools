@@ -1,0 +1,9 @@
+FILES := math.c print.c ui.cpp .c.c .casd
+SRC_C := $(filter %.c,$(FILES))
+SRC_CPP := $(filter %.cpp,$(FILES))
+objs :=$(subst .c,.o,$(SRC_C))
+objs +=$(subst .cpp,.o,$(SRC_CPP))
+all :
+	@echo $(FILES)
+	@echo $(wordlist 12,2,$(FILES))
+	@echo $(shell ls)
