@@ -1,0 +1,3 @@
+-I/toolchains/arm-linux-androideabi-4.4.3/prebuilt/linux-x86/lib/gcc/arm-linux-androideabi/4.4.3/include-fixed -I/sources/cxx-stl/gnu-libstdc++/4.4.3/include /sources/cxx-stl/gnu-libstdc++/4.4.3/libs/armeabi/include -I/platforms/android-9/arch-arm /usr/include
+-L/sources/cxx-stl/gnu-libstdc++/4.4.3/libs/armeabi -L/platforms/android-9/arch-arm /usr/lib -l/platforms/android-9/arch-arm /usr/lib/crtbegin_dynamic.o /platforms/android-9/arch-arm /usr/lib/crtend_android.o
+/-gcc -I/toolchains/arm-linux-androideabi-4.4.3/prebuilt/linux-x86/lib/gcc/arm-linux-androideabi/4.4.3/include-fixed -I/sources/cxx-stl/gnu-libstdc++/4.4.3/include /sources/cxx-stl/gnu-libstdc++/4.4.3/libs/armeabi/include -I/platforms/android-9/arch-arm /usr/include -MP -fpic -ffunction-sections  
