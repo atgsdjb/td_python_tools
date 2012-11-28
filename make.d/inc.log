@@ -1,0 +1,1 @@
+-I/cygdrive/d/android-ndk-r8b/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/lib/gcc/arm-linux-androideabi/4.4.3/include-fixed -I/cygdrive/d/android-ndk-r8b/sources/cxx-stl/gnu-libstdc++/4.4.3/include -I/cygdrive/d/android-ndk-r8b/platforms/android-9/arch-arm/usr/include

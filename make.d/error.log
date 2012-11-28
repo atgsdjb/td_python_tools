@@ -1,2 +1,10 @@
-make: /-gcc£∫√¸¡ÓŒ¥’“µΩ
-make: *** [td_add.o] ¥ÌŒÛ 127
+In file included from td_add.c:1:
+D:\android-ndk-r8b\toolchains\arm-linux-androideabi-4.4.3\prebuilt\windows\bin\../lib/gcc/arm-linux-androideabi/4.4.3/include-fixed/stdio.h:50:23: error: sys/cdefs.h: No such file or directory
+D:\android-ndk-r8b\toolchains\arm-linux-androideabi-4.4.3\prebuilt\windows\bin\../lib/gcc/arm-linux-androideabi/4.4.3/include-fixed/stdio.h:51:24: error: sys/_types.h: No such file or directory
+In file included from td_add.c:1:
+D:\android-ndk-r8b\toolchains\arm-linux-androideabi-4.4.3\prebuilt\windows\bin\../lib/gcc/arm-linux-androideabi/4.4.3/include-fixed/stdio.h:163: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'extern'
+D:\android-ndk-r8b\toolchains\arm-linux-androideabi-4.4.3\prebuilt\windows\bin\../lib/gcc/arm-linux-androideabi/4.4.3/include-fixed/stdio.h:232: error: expected '=', ',', ';', 'asm' or '__attribute__' before '__BEGIN_DECLS'
+D:\android-ndk-r8b\toolchains\arm-linux-androideabi-4.4.3\prebuilt\windows\bin\../lib/gcc/arm-linux-androideabi/4.4.3/include-fixed/stdio.h:382: error: expected '=', ',', ';', 'asm' or '__attribute__' before '__BEGIN_DECLS'
+D:\android-ndk-r8b\toolchains\arm-linux-androideabi-4.4.3\prebuilt\windows\bin\../lib/gcc/arm-linux-androideabi/4.4.3/include-fixed/stdio.h:393: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'static'
+arm-linux-androideabi-gcc.exe: /cygdrive/d/android-ndk-r8b/sources/cxx-stl/gnu-libstdc++/4.4.3/libs/armeabi/include: No such file or directory
+make: *** [td_add.o] ¥ÌŒÛ 1
